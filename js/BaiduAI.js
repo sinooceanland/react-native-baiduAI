@@ -7,10 +7,9 @@ import React,{
     Component,
     PropTypes
 } from 'react';
-import {
+import ReactNative,{
     findNodeHandle,
     NativeModules,
-    ReactNative,
     Platform,
     requireNativeComponent,
     UIManager, View
