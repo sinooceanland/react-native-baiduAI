@@ -1,0 +1,22 @@
+{
+  "name": "react-native-baiduai",
+  "version": "1.0.0",
+  "description": "百度人脸采集组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunflowerGJ/react-native-baiduAI.git"
+  },
+  "keywords": [
+    "yuanxinbaiduai"
+  ],
+  "author": "gaojie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunflowerGJ/react-native-baiduAI/issues"
+  },
+  "homepage": "https://github.com/SunflowerGJ/react-native-baiduAI#readme"
+}
