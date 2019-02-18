@@ -29,14 +29,12 @@
 ### android
 react-native link react-native-baiduai
 或
-在setting.gradle配置
-include ':react-native-baiduai'
-project(':react-native-baiduai').projectDir = new File(settingsDir, '../node_modules/react-native-baiduai/android')
-4.在build.gradle中复制
+1. 在setting.gradle配置 “ include ':react-native-baiduai'”
+“project(':react-native-baiduai').projectDir = new File(settingsDir, '../node_modules/react-native-baiduai/android')”
+2. 在build.gradle中复制
 compile project(':react-native-baiduai')
-5.在MainApplication添加引用
-import com.yuanxin.aiFace.AiFacePackage;
-new AiFacePackage()
+3. 在MainApplication添加引用 “import com.yuanxin.aiFace.AiFacePackage;”
+“new AiFacePackage()”
 
 ### 使用方式
 
