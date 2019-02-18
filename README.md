@@ -2,38 +2,46 @@
 
 ## 总体介绍
 
-​	组件所在源码路径为https://github.com/SunflowerGJ/react-native-baiduAI
+​	组件所在源码路径为https://github.com/sinooceanland/react-native-baiduai
 
 ## 使用介绍
 
 ### npm 安装
 
-1.在项目根目录的package.js里添加  "react-native-baiduAI": "git+https://github.com/SunflowerGJ/react-native-baiduAI.git"
+1.在项目根目录的package.js里添加  "react-native-baiduai": "git+https://github.com/sinooceanland/react-native-baiduai.git"
 
 2.执行 npm install
 
 ### IOS
 
 配置
-1. 在项目中选中Libraries文件夹，右键选择add File to "你的工程"，在node_modules文件夹下找到react-native-baiduAI/ios/RNBaiduAI.xcodeproj，add到项目中
+1. 在项目中选中Libraries文件夹，右键选择add File to "你的工程"，在node_modules文件夹下找到react-native-baiduai/ios/RNBaiduAI.xcodeproj，add到项目中
 2. 选中项目在targets中的Build Phases选项
  （1 找到Link Binary and Libraries并添加 libRNBaiduAI.a
 （2 找到Copy Bundle Resources并添加```idl-license-Enp.face-ios ， idl-license-Com.face-ios，com.baidu.idl.face.faceSDK.bundle，com.baidu.idl.face.model.bundle```四个文件
 3. 选中项目在targets中的Build Settings：
-(1)  找到Framework Search Paths ，在右边添加路径 ```$(SRCROOT)/../node_modules/react-native-baiduAI/ios/RNBaiduAI/Frameworks/FaceSDK ```
-(2) 找到Header Search Paths ，在右边添加路径```$(SRCROOT)/../node_modules/react-native-baiduAI/ios/RNBaiduAI```
+(1)  找到Framework Search Paths ，在右边添加路径 ```$(SRCROOT)/../node_modules/react-native-baiduai/ios/RNBaiduAI/Frameworks/FaceSDK ```
+(2) 找到Header Search Paths ，在右边添加路径```$(SRCROOT)/../node_modules/react-native-baiduai/ios/RNBaiduAI```
 
 以上都不用选Copy items if needed 
 
 
 ### android
-
-待补充
+react-native link react-native-baiduai
+或
+在setting.gradle配置
+include ':react-native-baiduai'
+project(':react-native-baiduai').projectDir = new File(settingsDir, '../node_modules/react-native-baiduai/android')
+4.在build.gradle中复制
+compile project(':react-native-baiduai')
+5.在MainApplication添加引用
+import com.yuanxin.aiFace.AiFacePackage;
+new AiFacePackage()
 
 ### 使用方式
 
 引入包文件
-import {BaiduAIView} from 'react-native-baiduAI'
+import {BaiduAIView} from 'react-native-baiduai'
 使用方法：
 ```
 <BaiduAIView style={{height: global.appStyles.cssSize.DeviceHeight}}
@@ -80,3 +88,5 @@ _reload = () => {
 ```
  this.refs.detectionView && this.refs.detectionView.destroy();
 ```
+
+
