@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		32145FD522151DBE002C7FF8 /* com.baidu.idl.face.model.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E2ABC42213BCE000FCAA54 /* com.baidu.idl.face.model.bundle */; };
 		32145FD622151DBE002C7FF8 /* com.baidu.idl.face.faceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E2ABC72213BCE000FCAA54 /* com.baidu.idl.face.faceSDK.bundle */; };
-		32E2ABCA2213BCE000FCAA54 /* VideoCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABA72213BCE000FCAA54 /* VideoCaptureDevice.m */; };
 		32E2ABCB2213BCE000FCAA54 /* FaceBaseViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABA92213BCE000FCAA54 /* FaceBaseViewControllerManager.m */; };
 		32E2ABCC2213BCE000FCAA54 /* DetectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABAA2213BCE000FCAA54 /* DetectionView.m */; };
 		32E2ABCD2213BCE000FCAA54 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABAC2213BCE000FCAA54 /* ImageUtils.m */; };
@@ -21,6 +20,7 @@
 		32E2ABD42213BCE000FCAA54 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABBD2213BCE000FCAA54 /* CircleView.m */; };
 		32E2ABD52213BCE000FCAA54 /* IDLFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E2ABC22213BCE000FCAA54 /* IDLFaceSDK.framework */; };
 		32E2ABD62213BCE000FCAA54 /* DetectionViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E2ABC82213BCE000FCAA54 /* DetectionViewControllerManager.m */; };
+		6FCEED462282DFFD0098663B /* VideoCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCEED452282DFFD0098663B /* VideoCaptureDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,8 +38,6 @@
 /* Begin PBXFileReference section */
 		32E2AB972213B8A500FCAA54 /* libRNBaiduAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBaiduAI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E2ABA42213BCE000FCAA54 /* DetectionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectionViewManager.h; sourceTree = "<group>"; };
-		32E2ABA62213BCE000FCAA54 /* VideoCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureDevice.h; sourceTree = "<group>"; };
-		32E2ABA72213BCE000FCAA54 /* VideoCaptureDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureDevice.m; sourceTree = "<group>"; };
 		32E2ABA92213BCE000FCAA54 /* FaceBaseViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBaseViewControllerManager.m; sourceTree = "<group>"; };
 		32E2ABAA2213BCE000FCAA54 /* DetectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectionView.m; sourceTree = "<group>"; };
 		32E2ABAC2213BCE000FCAA54 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
@@ -67,6 +65,8 @@
 		32E2ABC72213BCE000FCAA54 /* com.baidu.idl.face.faceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.baidu.idl.face.faceSDK.bundle; sourceTree = "<group>"; };
 		32E2ABC82213BCE000FCAA54 /* DetectionViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectionViewControllerManager.m; sourceTree = "<group>"; };
 		32E2ABC92213BCE000FCAA54 /* DetectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectionView.h; sourceTree = "<group>"; };
+		6FCEED442282DFFD0098663B /* VideoCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureDevice.h; sourceTree = "<group>"; };
+		6FCEED452282DFFD0098663B /* VideoCaptureDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		32E2ABA32213BCE000FCAA54 /* BaiduFaceRecongnizer */ = {
 			isa = PBXGroup;
 			children = (
-				32E2ABA52213BCE000FCAA54 /* Core */,
+				6FCEED432282DFFD0098663B /* Core */,
 				32E2ABC92213BCE000FCAA54 /* DetectionView.h */,
 				32E2ABAA2213BCE000FCAA54 /* DetectionView.m */,
 				32E2ABAE2213BCE000FCAA54 /* DetectionViewControllerManager.h */,
@@ -124,15 +124,6 @@
 				32E2ABBB2213BCE000FCAA54 /* View */,
 			);
 			path = BaiduFaceRecongnizer;
-			sourceTree = "<group>";
-		};
-		32E2ABA52213BCE000FCAA54 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				32E2ABA62213BCE000FCAA54 /* VideoCaptureDevice.h */,
-				32E2ABA72213BCE000FCAA54 /* VideoCaptureDevice.m */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		32E2ABAB2213BCE000FCAA54 /* Utils */ = {
@@ -188,6 +179,15 @@
 				32E2ABC72213BCE000FCAA54 /* com.baidu.idl.face.faceSDK.bundle */,
 			);
 			path = FaceSDK;
+			sourceTree = "<group>";
+		};
+		6FCEED432282DFFD0098663B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6FCEED442282DFFD0098663B /* VideoCaptureDevice.h */,
+				6FCEED452282DFFD0098663B /* VideoCaptureDevice.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +263,8 @@
 				32E2ABCB2213BCE000FCAA54 /* FaceBaseViewControllerManager.m in Sources */,
 				32E2ABD32213BCE000FCAA54 /* RemindView.m in Sources */,
 				32E2ABD02213BCE000FCAA54 /* ImageViewController.m in Sources */,
+				6FCEED462282DFFD0098663B /* VideoCaptureDevice.m in Sources */,
 				32E2ABD12213BCE000FCAA54 /* DetectionViewManager.m in Sources */,
-				32E2ABCA2213BCE000FCAA54 /* VideoCaptureDevice.m in Sources */,
 				32E2ABCD2213BCE000FCAA54 /* ImageUtils.m in Sources */,
 				32E2ABD62213BCE000FCAA54 /* DetectionViewControllerManager.m in Sources */,
 				32E2ABD42213BCE000FCAA54 /* CircleView.m in Sources */,
